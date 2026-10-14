@@ -1,0 +1,285 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="robots" content="noindex,nofollow"><meta name="theme-color" content="#111214"></head><body><title>GLB Industrial Gear Shaft</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Lato:wght@400;700&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout: the rendered GLB gear is a fixed background for the whole page. It is full strength through the hero and the six departments, where each swipe turns it clockwise one section, then fades back behind the catalog and quote form. Single dark look by choice; brand red + Oswald/Lato from the live site. */
+:root{
+  --bg:#111214; --panel:rgba(26,27,30,.86); --panel-solid:#1a1b1e; --line:#2c2e32; --fg:#f1efeb; --muted:#a39f98;
+  --red:#ed1c24;
+  --display:"Oswald","Arial Narrow",Impact,sans-serif;
+  --body:"Lato","Helvetica Neue",Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  --gutter:clamp(16px,4vw,48px);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{background:var(--bg);color:var(--fg);font:16px/1.6 var(--body);margin:0;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img{display:block;max-width:100%;height:auto}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.02;text-wrap:balance;margin:0;text-transform:uppercase}
+.wrap{padding-inline:var(--gutter);max-width:1240px;margin-inline:auto}
+.eyebrow{font:500 12px/1.3 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--red)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:600 15px/1 var(--display);letter-spacing:.08em;text-transform:uppercase;text-decoration:none;padding:15px 20px;border-radius:2px;border:1px solid transparent;cursor:pointer}
+.btn.red{background:var(--red);color:#fff}
+.btn.line{border-color:rgba(255,255,255,.3);color:var(--fg)}
+.btn:focus-visible,a:focus-visible,summary:focus-visible,input:focus,textarea:focus,button:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+
+/* header */
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:rgba(17,18,20,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.top{display:flex;align-items:center;justify-content:space-between;gap:14px;padding-block:10px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand svg{width:42px;height:auto;color:var(--fg)}
+.brand b{font:600 16px/1 var(--display);letter-spacing:.1em}
+nav{display:flex;gap:22px;font:500 14px/1 var(--display);letter-spacing:.1em;text-transform:uppercase}
+nav a{text-decoration:none;color:var(--muted)} nav a:hover{color:var(--fg)}
+.tr{display:flex;align-items:center;gap:14px}
+.tr .ph{font:600 15px/1 var(--display);letter-spacing:.06em;text-decoration:none}
+.tr .btn{padding:11px 14px;font-size:14px}
+@media (max-width:860px){nav,.tr .ph{display:none}}
+@media (max-width:420px){.brand b{display:none}}
+
+/* the gear */
+/* each department's back photo sits behind the gear and crossfades as you scroll */
+#bgs{position:fixed;inset:0;z-index:0;pointer-events:none}
+#bgs div{position:absolute;inset:0;background:center/cover no-repeat;opacity:0;will-change:opacity}
+#bgs::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 70% 40%,rgba(17,18,20,.28),rgba(17,18,20,.78) 78%),linear-gradient(rgba(17,18,20,.2),rgba(17,18,20,.5))}
+#stage{position:fixed;inset:0;z-index:0;pointer-events:none;transition:opacity .6s ease}
+#stage.dim{opacity:.2}
+#gear{position:absolute;aspect-ratio:1;max-width:100%;left:50%;transform:translateX(-50%);top:calc(env(safe-area-inset-top,0px) + 58px);width:min(100vw,50svh)}
+@media (min-width:900px){#gear{left:auto;transform:translateY(-50%);right:max(-30px,calc(50vw - 660px));top:54%;width:min(50vw,84vh)}}
+main{position:relative;z-index:1}
+
+/* hero */
+.hero{min-height:100svh;display:flex;align-items:flex-end;padding-block:40px 56px}
+@media (min-width:900px){.hero{align-items:center}}
+.hero .wrap{width:100%}
+.hero .in{max-width:480px;text-shadow:0 1px 14px rgba(0,0,0,.75),0 0 2px rgba(0,0,0,.6)}
+.hero .eyebrow{color:#ff4a50}
+.hero h1{font-size:clamp(46px,8.4vw,92px);font-weight:700;margin-top:14px}
+.hero p{color:#d6d1c9;font-size:clamp(17px,2vw,19px);max-width:44ch;margin:18px 0 0}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.cue{margin-top:28px;font:500 11px/1 var(--mono);letter-spacing:.16em;color:var(--muted);text-transform:uppercase}
+
+/* departments */
+.gate{position:sticky;top:calc(env(safe-area-inset-top,0px) + 70px);z-index:3;display:flex;justify-content:flex-end;padding-inline:var(--gutter);pointer-events:none;height:0}
+.gate ol{pointer-events:auto;display:flex;gap:4px;list-style:none;margin:0;padding:6px;background:rgba(17,18,20,.7);border:1px solid var(--line);border-radius:2px}
+.gate a{display:grid;place-items:center;width:28px;height:28px;font:600 13px/1 var(--display);text-decoration:none;color:var(--muted);border-radius:2px}
+.gate a.on{background:var(--red);color:#fff}
+.dept{min-height:100svh;display:flex;align-items:flex-end;padding-block:30px}
+@media (min-width:900px){.dept{align-items:center}}
+/* phones: each department gets extra scroll so the gear turns in clear view before the card slides over it */
+@media (max-width:899px){.dept{min-height:122svh;padding-bottom:16px}.card img{aspect-ratio:3/1}.card .tx{padding:16px 16px 18px}}
+.card{width:min(440px,100%);background:var(--panel);border:1px solid var(--line);border-radius:2px;overflow:hidden;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.card img{width:100%;aspect-ratio:21/9;object-fit:cover}
+.card .tx{padding:18px 20px 20px}
+.no{display:flex;justify-content:space-between;font:500 12px/1 var(--mono);letter-spacing:.14em;color:var(--red);text-transform:uppercase}
+.no span{color:var(--muted)}
+.card h2{font-size:clamp(28px,5vw,38px);margin:10px 0 8px}
+.card p{margin:0;color:#cfcac2;font-size:15px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.chips{gap:5px}
+.chips span{font-size:12.5px;line-height:1;border:1px solid var(--line);background:rgba(255,255,255,.03);padding:8px 9px;border-radius:2px}
+.card .hook{color:var(--fg);font-weight:700;font-size:16px;margin-bottom:6px}
+.brands{margin-top:14px;padding-top:12px;border-top:1px solid var(--line);font-size:13px;color:var(--muted);line-height:1.5}
+.brands b{display:block;font:500 11px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:6px}
+.one{min-height:100svh;display:flex;align-items:flex-end;padding-block:40px 56px}
+@media (min-width:900px){.one{align-items:center}}
+.one .wrap{width:100%} .one .in{max-width:520px}
+.one .list{margin:0;font:600 clamp(20px,2.6vw,26px)/1.25 var(--display);text-transform:uppercase;letter-spacing:.03em;color:#d6d1c9}
+.one .list span{white-space:nowrap}
+.one h2{font-size:clamp(46px,8.4vw,92px);font-weight:700;margin-top:14px;color:var(--fg)}
+.new{display:inline-block;background:var(--red);color:#fff;font:500 10px/1 var(--mono);letter-spacing:.12em;padding:4px 6px;border-radius:2px;vertical-align:middle;margin-left:8px}
+
+/* sections after the gear story */
+.sec{padding-block:clamp(64px,10vw,120px);border-top:1px solid var(--line)}
+.sec h2{font-size:clamp(34px,5.6vw,58px)}
+.lede{color:var(--muted);max-width:60ch;font-size:17px;margin:14px 0 0}
+.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin-top:34px}
+.why div{background:var(--panel-solid);padding:22px}
+.why b{display:block;font:700 40px/1 var(--display);font-variant-numeric:tabular-nums}
+.why b small{font-size:18px;color:var(--muted);font-weight:500}
+.why p{margin:10px 0 0;color:var(--muted);font-size:15px}
+.why p strong{color:var(--fg);display:block}
+.cats{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:8px;margin-top:28px}
+details{background:var(--panel);border:1px solid var(--line);border-radius:2px}
+summary{cursor:pointer;list-style:none;padding:15px 16px;display:flex;justify-content:space-between;gap:10px;font:600 16px/1.15 var(--display);letter-spacing:.05em;text-transform:uppercase}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--muted);font-family:var(--mono)}
+details[open] summary::after{content:"–"}
+details[open] summary{color:var(--red)}
+details p{margin:0;padding:0 16px 16px;color:var(--muted);font-size:14px}
+.sub{margin-top:52px}
+.sub h3{font-size:22px;margin:6px 0 0}
+.svc{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.svc span{border:1px solid var(--line);padding:9px 11px;font-size:14px;border-radius:2px;background:var(--panel)}
+.rfq{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(28px,5vw,60px);align-items:start}
+@media (max-width:860px){.rfq{grid-template-columns:1fr}}
+form{display:grid;gap:14px;background:var(--panel-solid);border:1px solid var(--line);padding:22px;border-radius:2px;min-width:0}
+label{display:grid;gap:7px;font:500 12px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+input,textarea{font:16px/1.4 var(--body);color:var(--fg);background:var(--bg);border:1px solid var(--line);border-radius:2px;padding:12px;width:100%}
+.seg{display:flex;gap:8px;flex-wrap:wrap}
+.seg label{display:flex;align-items:center;gap:8px;border:1px solid var(--line);padding:11px 12px;text-transform:none;letter-spacing:0;font:15px/1 var(--body);color:var(--fg);cursor:pointer;border-radius:2px}
+.seg input{width:auto}
+.out{font:500 13px/1.5 var(--mono);border:1px dashed var(--red);padding:12px}
+.contact{display:grid;gap:14px;margin-top:26px}
+.contact div{border-left:2px solid var(--red);padding-left:14px}
+.contact b{display:block;font:600 22px/1.1 var(--display);letter-spacing:.04em;user-select:all}
+.contact span{font:500 11px/1.4 var(--mono);letter-spacing:.12em;color:var(--muted);text-transform:uppercase}
+footer{position:relative;z-index:1;border-top:3px solid var(--red);background:#0b0b0c;padding-block:30px}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px;color:var(--muted);font-size:13px}
+.mock{position:fixed;left:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:50;font:500 10px/1 var(--mono);letter-spacing:.12em;color:#ffb3b5;background:#2a0d0e;padding:6px 8px;border-radius:2px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+
+<header>
+  <div class="wrap top">
+    <a class="brand" href="#top" aria-label="GLB Industrial home"><svg role="img" aria-label="GLB" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 396.47 319.98"><defs><style>.cls-1{fill:none;}.cls-2{clip-path:url(#glbh-clip-path);}.cls-3{fill:none;}.cls-4{fill:currentColor;}</style><clipPath id="glbh-clip-path" transform="translate(-5.72 -0.96)"><rect class="cls-1" width="406.66" height="322.44"/></clipPath></defs><g id="glbh-Layer_2" data-name="Layer 2"><g id="glbh-Layer_1-2" data-name="Layer 1"><g class="cls-2"><path class="cls-3" d="M397.33,164.17l4,.39a146.17,146.17,0,0,0,.89-15.15H399a15,15,0,0,1-15-13.35l0-.27a15,15,0,0,1,11.62-16.37l3.36-.76a122.14,122.14,0,0,0-4.33-15.07l-2.92,1a15.17,15.17,0,0,1-18.77-7.89l-.12-.25a15.15,15.15,0,0,1,5.65-19.26l2.44-1.54a140.38,140.38,0,0,0-9-12.46l-2,1.58A14.77,14.77,0,0,1,350,63.46l-.19-.19a14.78,14.78,0,0,1-.66-19.77L350.39,42q-5.82-4.64-12-8.65l-1.4,2a13.94,13.94,0,0,1-18.28,4.16l-.41-.22a14,14,0,0,1-6-18.15l.59-1.27q-6.56-2.78-13.24-5l-.74,2a13.66,13.66,0,0,1-16.18,8.46l-.25-.06a13.7,13.7,0,0,1-10-16.16l.14-.65Q265.8,7.4,259,6.8l-.28,2A13.32,13.32,0,0,1,245.22,20.2H245A13.36,13.36,0,0,1,231.89,6.72V6.6q-6.72.42-13.35,1.28l.12,2.28a12.76,12.76,0,0,1-10.25,13.22l-.84.16a12.75,12.75,0,0,1-15-10.19c-2.12.6-4.22,1.22-6.32,1.88s-4.15,1.41-6.21,2.16l.63,2.51a11.35,11.35,0,0,1-6.89,13.3c-.93.36-1.85.73-2.77,1.11a11.29,11.29,0,0,1-14.81-6.37c-1.9,1.06-3.77,2.07-5.67,3.18s-3.76,2.22-5.6,3.38l1.26,2.69a9.11,9.11,0,0,1-3.41,11.6c-1.91,1.2-3.81,2.43-5.67,3.69a9.14,9.14,0,0,1-12.82-2.57c-1.6,1.4-3.17,2.81-4.71,4.25s-3,2.94-4.5,4.44l1.87,2.52a6,6,0,0,1-.75,8q-4.38,4.07-8.45,8.43a6,6,0,0,1-8.78.08c-1.21,1.66-2.4,3.33-3.55,5s-2.24,3.44-3.31,5.17l4,3.74a150.85,150.85,0,0,0-12.22,19.53l-.15.31L80,117.92l2.07-.77.4-.54,1.22.84a167.82,167.82,0,0,1,28-30.42,183.18,183.18,0,0,1,34.33-23,186.57,186.57,0,0,1,79.13-21.42c47.15-2.22,99,17.63,121.37,61.39C373.31,155.56,350,215,308.92,251.4c-45.54,40.93-114.7,59.3-173.48,39.5l-.78-.32-.79,2.62,5.11,2.59c3.31,1.68,17.81,7.47,21.71,8.65l-1,5.59q2.85,1.14,5.76,2.18c1.95.67,3.91,1.3,5.88,1.91a6.34,6.34,0,0,1,7.39-5.49q5.58.94,11.23,1.47a6.33,6.33,0,0,1,5.75,6.22l0,3.29c2.08.3,4.18.62,6.28.81s4.22.38,6.34.52a9.9,9.9,0,0,1,9.16-10.63c1.81-.13,3.69-.27,5.46-.42a9.89,9.89,0,0,1,10.48,7.79l.65,3q6.47-.57,13-1.6a12.25,12.25,0,0,1,8.44-15.17l1.49-.42a12.19,12.19,0,0,1,14.54,6.84l1.08,2.45c2.07-.67,4.15-1.34,6.19-2.11s4.07-1.55,6.1-2.37l-.29-.56a12.94,12.94,0,0,1,5.7-17.46l.22-.11a12.9,12.9,0,0,1,16.51,4.3l1.64,2.42q5.74-3.3,11.32-7l-.84-1.08a13.16,13.16,0,0,1,2.36-18.39l.2-.15a13.11,13.11,0,0,1,17.39,1.13l2.25,2.28q5.07-4.47,9.86-9.3l-1.4-1.25a13.41,13.41,0,0,1-1.34-18.67l.16-.19a13.4,13.4,0,0,1,17.76-2.49l2.72,1.84q4.1-5.59,7.81-11.51l-2.32-1.34a13.58,13.58,0,0,1-5.3-17.91c.07-.16.15-.31.23-.47a13.57,13.57,0,0,1,17-6.71l3.47,1.34c1.84-4.42,3.52-8.95,5-13.57l-3.23-1A14.35,14.35,0,0,1,381.77,176l.06-.34a14.33,14.33,0,0,1,15.5-11.52" transform="translate(-5.72 -0.96)"/><path class="cls-4" d="M391.69,158.53l4,.39a149,149,0,0,0,.9-15.15l-3.23,0a15.05,15.05,0,0,1-15-13.36l0-.27a15,15,0,0,1,11.62-16.37l3.37-.76A124,124,0,0,0,389,98L386,99a15.18,15.18,0,0,1-18.77-7.9l-.12-.25a15.16,15.16,0,0,1,5.65-19.26L375.23,70a145.4,145.4,0,0,0-9-12.46l-2,1.58a14.77,14.77,0,0,1-19.84-1.34l-.19-.19a14.78,14.78,0,0,1-.66-19.76l1.24-1.48c-3.87-3.1-7.87-6-11.95-8.66l-1.41,2a14,14,0,0,1-18.28,4.17l-.41-.23a14,14,0,0,1-6-18.14l.6-1.28q-6.57-2.76-13.25-5l-.74,1.95a13.65,13.65,0,0,1-16.18,8.46l-.25-.06a13.71,13.71,0,0,1-10-16.16l.14-.65q-6.81-1.08-13.62-1.67l-.28,2a13.31,13.31,0,0,1-13.48,11.44h-.26A13.36,13.36,0,0,1,226.25,1.09V1q-6.72.42-13.35,1.28L213,4.52a12.76,12.76,0,0,1-10.25,13.22l-.85.17a12.75,12.75,0,0,1-15-10.19q-3.18.89-6.32,1.87c-2.09.67-4.16,1.41-6.22,2.16l.63,2.51a11.34,11.34,0,0,1-6.89,13.3c-.93.36-1.85.73-2.77,1.11a11.29,11.29,0,0,1-14.81-6.36c-1.9,1.05-3.76,2.06-5.67,3.17s-3.76,2.23-5.6,3.38l1.26,2.69a9.11,9.11,0,0,1-3.4,11.6q-2.88,1.8-5.68,3.7a9.14,9.14,0,0,1-12.81-2.58c-1.6,1.4-3.18,2.81-4.72,4.25s-3,2.94-4.5,4.44l1.87,2.52a6,6,0,0,1-.75,8c-2.91,2.71-5.74,5.52-8.45,8.43a6,6,0,0,1-8.78.08c-1.21,1.66-2.4,3.33-3.55,5s-2.24,3.43-3.31,5.16l4,3.74a149.84,149.84,0,0,0-12.23,19.53l-.14.31-3.65,6.54,2.07-.77.4-.54,1.22.85a167.88,167.88,0,0,1,28-30.43,182.65,182.65,0,0,1,34.33-23A186.48,186.48,0,0,1,219.51,37c47.15-2.21,99,17.64,121.37,61.39,26.79,51.53,3.45,111-37.6,147.37-45.54,40.93-114.7,59.3-173.48,39.5L129,285l-.78,2.61,5.1,2.59c3.32,1.68,17.82,7.47,21.72,8.65l-1,5.6c1.91.75,3.83,1.48,5.77,2.17s3.9,1.3,5.88,1.91a6.33,6.33,0,0,1,7.38-5.49q5.6.94,11.24,1.48a6.32,6.32,0,0,1,5.74,6.21l0,3.29c2.08.3,4.18.62,6.28.81s4.22.39,6.34.53a9.91,9.91,0,0,1,9.16-10.64l5.47-.41A9.88,9.88,0,0,1,227.81,312l.65,3q6.48-.57,13-1.59a12.24,12.24,0,0,1,8.44-15.17l1.49-.43a12.21,12.21,0,0,1,14.54,6.84l1.08,2.45c2.07-.67,4.15-1.34,6.19-2.11s4.08-1.55,6.1-2.37l-.28-.56a12.94,12.94,0,0,1,5.69-17.46l.22-.11a12.89,12.89,0,0,1,16.51,4.3l1.64,2.43q5.76-3.31,11.32-7l-.83-1.09a13.14,13.14,0,0,1,2.35-18.38l.2-.16a13.13,13.13,0,0,1,17.4,1.13l2.25,2.28q5.06-4.47,9.85-9.29l-1.4-1.25a13.42,13.42,0,0,1-1.34-18.67l.16-.2a13.4,13.4,0,0,1,17.76-2.49l2.72,1.84q4.1-5.58,7.82-11.51L369,225.17a13.59,13.59,0,0,1-5.3-17.91l.23-.47a13.57,13.57,0,0,1,17-6.71l3.48,1.34q2.76-6.63,5-13.57l-3.23-.95a14.35,14.35,0,0,1-10.06-16.51c0-.11.05-.23.07-.34a14.32,14.32,0,0,1,15.49-11.52" transform="translate(-5.72 -0.96)"/><polygon class="cls-3" points="176.62 115.82 148.31 115.82 119.72 217.39 197.57 217.39 202.68 199.25 153.13 199.25 176.62 115.82"/><path class="cls-3" d="M142.7,116.78H64.06s-28-2.55-33.94,18.47l-18.29,65S6,218.35,35.47,218.35h78.64l16.89-60H63.37l-5.11,18.14H98L91.3,200.21H51.58s-11.11.66-8.62-8.45L57,141.9s1.17-6.65,12.88-6.65H137.5Z" transform="translate(-5.72 -0.96)"/><path class="cls-3" d="M324.68,116.79H242.57l-5.2,18.46h68.51s10.15-1.32,7.67,10.88-9.4,12.2-13.35,12.2H258.47l3.35-11.89h-27.6L214,218.35h79.59s26.31,3.07,32-18.14,5.84-22.09,6.27-23.74.24-8.9-5.7-8.9c5.69.33,10.36-6.17,11.22-9.24l6.5-23.08s7.76-18.46-19.2-18.46m-23,70.64c-3,12.78-9.64,12.78-15.09,12.78H246.68l6.68-23.74h40.21s11.08-1.81,8.11,11" transform="translate(-5.72 -0.96)"/><polygon class="cls-4" points="170.98 110.18 142.67 110.18 114.08 211.75 191.93 211.75 197.04 193.61 147.5 193.61 170.98 110.18"/><path class="cls-4" d="M137.06,111.15H58.43s-28-2.56-33.95,18.46l-18.29,65S.31,212.71,29.84,212.71h78.63l16.89-60H57.73l-5.11,18.13H92.34l-6.68,23.75H45.94s-11.11.66-8.62-8.46l14-49.85s1.17-6.66,12.87-6.66h67.63Z" transform="translate(-5.72 -0.96)"/><path class="cls-4" d="M319,111.15H236.93l-5.19,18.46h68.51s10.14-1.32,7.66,10.89-9.39,12.2-13.35,12.2H252.83l3.35-11.9H228.59l-20.25,71.91h79.59s26.31,3.07,32-18.13,5.84-22.1,6.27-23.75.24-8.9-5.69-8.9c5.68.33,10.35-6.17,11.21-9.23s6.5-23.09,6.5-23.09S346,111.15,319,111.15M296,181.8c-3,12.78-9.64,12.78-15.08,12.78H241l6.69-23.75h40.2S299,169,296,181.8" transform="translate(-5.72 -0.96)"/></g></g></g></svg><b>GLB INDUSTRIAL</b></a>
+    <nav><a href="#d1">Products</a><a href="#services">Services</a><a href="#quote">Contact</a></nav>
+    <div class="tr"><a class="ph" href="tel:+12142755050">214.275.5050</a><a class="btn red" href="#quote">Request a Quote</a></div>
+  </div>
+</header>
+
+<div id="bgs" aria-hidden="true"></div>
+<div id="stage" aria-hidden="true"><canvas id="gear"></canvas></div>
+
+<main>
+  <section class="hero" id="top">
+    <div class="wrap"><div class="in">
+      <div class="eyebrow">Independently owned · Mesquite, Texas · Since 2002</div>
+      <h1>One independent supplier.</h1>
+      <p>Bearings, power transmission, fluid power, automation, pipe and jobsite supply for Texas plants and the crews building its data centers.</p>
+      <div class="cta"><a class="btn red" href="#quote">Request a Quote</a><a class="btn line" href="tel:+12142755050">Call 214.275.5050</a></div>
+      <div class="cue">Six departments. One gear. Zero grinding.</div>
+    </div></div>
+  </section>
+
+  <section id="departments" aria-label="Departments">
+    <div class="gate"><ol id="gate"></ol></div>
+    <div class="wrap" id="depts"></div>
+  </section>
+
+  <section class="one" id="one">
+    <div class="wrap"><div class="in">
+      <p class="list"><span>Bearings.</span> <span>Power transmission.</span> <span>Fluid power.</span> <span>Automation.</span> <span>Pipe.</span> <span>Jobsite supply.</span></p>
+      <h2>One independent supplier.</h2>
+      <div class="cta"><a class="btn red" href="#quote">Request a Quote</a><a class="btn line" href="#services">See the full catalog</a></div>
+    </div></div>
+  </section>
+
+  <section class="sec" id="why">
+    <div class="wrap">
+      <div class="eyebrow">Why GLB</div>
+      <h2>Independent since 2002.</h2>
+      <p class="lede">No franchise and no national parent deciding which brand you get. We pick the best source for each part and stand behind it.</p>
+      <div class="why">
+        <div><b>2002</b><p><strong>Independently owned</strong>Founded as an independent source of bearings, power transmission and fluid power.</p></div>
+        <div><b>24/7</b><p><strong>We're there when you need us</strong>One number, day or night: 214.275.5050.</p></div>
+        <div><b>13</b><p><strong>Product lines</strong>From bearings and pipe to linear motion and process instrumentation.</p></div>
+        <div><b>15</b><p><strong>Shop and field services</strong>Rebuilds, machining, PMs, tool cribs and more through Evol Parts &amp; Service.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="services">
+    <div class="wrap">
+      <div class="eyebrow">Full catalog</div>
+      <h2>Every category we carry.</h2>
+      <div class="cats" id="cats"></div>
+      <div class="sub"><div class="eyebrow">Evol Parts &amp; Service</div><h3>Shop and field services</h3><div class="svc" id="svc"></div></div>
+      <div class="sub" id="packaging"><div class="eyebrow">Packaging</div><h3>Packaging lines</h3><div class="cats" id="pack"></div></div>
+    </div>
+  </section>
+
+  <section class="sec" id="quote">
+    <div class="wrap rfq">
+      <div>
+        <div class="eyebrow">Request a quote</div>
+        <h2>Send a part number. Or a photo.</h2>
+        <p class="lede">Tell us what you need, where and when. A person at GLB answers, not a call center.</p>
+        <div class="contact">
+          <div><b>214.275.5050</b><span>24/7 breakdown line</span></div>
+          <div><b>4601 Eastover Dr, Mesquite, TX 75149</b><span><a href="https://www.google.com/maps/place/GLB+Industrial/@32.7906199,-96.6690743,15z" target="_blank" rel="noopener">Open in Maps</a></span></div>
+        </div>
+      </div>
+      <form id="rfqform" novalidate>
+        <label for="f-name">Name<input id="f-name" autocomplete="name" placeholder="Your name"></label>
+        <label for="f-co">Company<input id="f-co" autocomplete="organization" placeholder="Company"></label>
+        <label for="f-part">Part number or description<textarea id="f-part" rows="3" placeholder="e.g. Dodge 2-bolt flange bearing, 1 in. bore, qty 4"></textarea></label>
+        <label for="f-photo">Photo of the part<input id="f-photo" type="file" accept="image/*"></label>
+        <label for="f-site">Plant or jobsite city<input id="f-site" placeholder="City"></label>
+        <div class="seg" role="radiogroup" aria-label="How fast">
+          <label for="u1"><input id="u1" type="radio" name="u" value="Hot shot today" checked>Hot shot today</label>
+          <label for="u2"><input id="u2" type="radio" name="u" value="This week">This week</label>
+          <label for="u3"><input id="u3" type="radio" name="u" value="Stock it for us">Stock it for us</label>
+        </div>
+        <button class="btn red" type="submit">Send request</button>
+        <div class="out" id="out" hidden></div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap foot"><span>© GLB Industrial · 4601 Eastover Dr, Mesquite, TX 75149 · 214.275.5050</span><span>Design mock · Photos: Pexels · Gear rendered in Blender</span></div></footer>
+
+<script>
+const DEPTS=[
+ {k:"Bearings & Power Transmission",img:"bear",bg:"bg-bear",alt:"Machined gear clusters",s:"A seized bearing or a dead motor stops the whole line.",t:"We keep it turning: bearings, reducers, chain, belts, couplings and motors, plus motor rewinds that take days instead of the weeks a new motor can take.",b:["Dodge","Baldor","SEW-Eurodrive","Nord","Gates","Tsubaki","Stearns"],i:["Mounted & flange bearings","Spherical & taper roller bearings","Gear reducers","Roller chain & sprockets","V-belts & sheaves","Couplings","Electric motors","Motor rewind"]},
+ {k:"Fluid Power & Hose",img:"fluid",bg:"bg-fluid",alt:"Pressure regulators and gauges on hose lines",s:"A blown line or a stuck valve means downtime and a mess on the floor.",t:"Hydraulic power units, pneumatics, pumps, valves, filters, hose and fittings, matched to the system you already run.",b:["Parker","Norgren","SPX Flow","Apollo","AMPCO","ASCO","SMC"],i:["Hydraulic power units","Cylinders & pumps","Ball valves","Process & sanitary pumps","Pneumatic valves & FRLs","Air & water hose","Push-to-connect fittings","Hydraulic filters"]},
+ {k:"Electrical & Automation",img:"auto",bg:"bg-auto",alt:"Automation stations with touch-screen controls",s:"When a drive faults or a sensor dies, the line waits on one part.",t:"Drives, PLCs, HMIs, sensors, circuit protection and cord from the brands your panels are already built on. Custom panels and PLC programming too.",b:["Allen-Bradley","Square D","Cutler-Hammer","Bussmann","Banner","SICK","Siemens"],i:["AC drives","PLCs & HMIs","Sensors & encoders","Fuses & circuit protection","Portable cord","Push buttons & pendants","Machine safety","Custom panels"]},
+ {k:"Pipe, Construction & Data Centers",n:1,img:"pipe",bg:"bg-pipe",alt:"Fire-protection pump room with red steel pipe",s:"Chilled water, condenser water, fire water, storm drainage: every data center campus is a piping job.",t:"Pipe, valves and fittings from the central plant out to the site utilities, in the materials mechanical contractors specify, plus the jobsite supply that keeps the crews moving.",b:["Apollo","Radians","Werner","Generac","Vulcan","Can-Am"],i:["Carbon steel pipe","Grooved couplings & fittings","Stainless pipe & press fittings","Copper tube","Cast iron soil pipe","PVC & CPVC","HDPE pipe","Corrugated storm pipe","Ductile iron pipe","Flanges & gaskets","Valves"],j:["Threaded rod & strut","PPE & fall protection","Generators & light towers","Heat stress & cooling","Can-Am cab UTVs (rental)"]},
+ {k:"Packaging",img:"pack",bg:"bg-pack",alt:"Bottled product moving on a packaging conveyor",s:"A clogged glue gun or a dead coder stops product at the end of the line.",t:"Coders and printers, hotmelt systems and case equipment, with PMs and rebuilds that keep them running.",b:["Valco Melton"],i:["CIJ & laser coders","Hi-res & thermal inkjet printers","Hotmelt units & guns","Hotmelt adhesives","Case erectors & sealers","Glue system PMs","Rebuild & exchange"]},
+ {k:"Shop & Field Services",img:"shop",bg:"bg-shop",alt:"Machine shop with lathes",s:"When the part is obsolete or stuck on a long lead time, we make it or fix it.",t:"Evol Parts & Service: rebuilds, machining and fabrication, reverse-engineered OEM parts, compressor PMs, stocked tool cribs and dry ice blasting.",b:[],i:["Motor & gearbox rebuild","Machine shop & fab","Reverse engineer OEM parts","Compressor PMs","Vendor managed inventory","Custom tool cribs","Dry ice blasting","Concrete repair"]}
+];
+const CATS={"Pipe, Valves & Fittings":"Carbon Steel Pipe, Grooved Couplings & Fittings, Stainless Pipe & Press Fittings, Copper Tube, Cast Iron Soil Pipe & No-Hub, PVC & CPVC, HDPE Pipe, Corrugated Storm Pipe, Ductile Iron Pipe, Flanges & Gaskets, Valves","Bearings":"Ball, Conveyor, Cylindrical, Mounted, Needle, Plain, Super Precision, Rod End, Roller, SAF, Sleeve, Slewing Ring, Spherical, Split, Take-Up, Taper Roller, Thrust, Track Roller","Electrical Automation":"AC Drive Control, AC Motors, Cables, Control & Signaling Devices, DC Drive Control, DC Motors, Electrical Brake/Clutch, Electrical Controls, Enclosures, Encoders & Resolvers, Fusing & Circuit Protection, HMIs, Logic Control, Metric Motor, Inverter/Vector, Limit Switches, Machine Safety, Meters & Timers, PLCs, Push Buttons & Pendants, Sensors, Servo & Stepper, Tachometers, Washdown Motors, Shaft Grounding","Gearing":"Bevel/Spiral, Cycloidal, Helical Bevel, Helical Worm, Hypoid, In-Line, Miter, Open Gears, Parallel Gears, Planetary, Right Angle Helical Bevel, Shaft-Mount, Spur, Worm & Worm Gears","Hose & Fittings":"Clamping, Composite, Couplings, Hydraulic, Industrial, Metal Tubing, Piping, Pneumatic, Push-to-Connect Fittings, Recoil Hose & Fittings, Sanitary & Pharmaceutical Fittings, Teflon Hose & Fittings, Thermoplastic Tubing, Compression Fittings","Hydraulic & Pneumatics":"Accumulators, Air Powered Vacuum Pump, Compressors, Cylinders, Electrical Vacuum Pump, Fieldbus Air Valves, Filter Regulator Lubricator (FRL), Hydraulic Filters, Hydraulic Gauge, Hydraulic Power Unit, Manifolds, Motors, Pneumatic Air Spring, Pneumatic Cooling Device, Pneumatic Roundline, Pumps, Vacuum, Valves","Industrial Supplies":"Abrasives, Adapter Sleeves, Batteries, Electrical Power Tools, Fans, Filters, Hydraulic Tools, Key Stock, Locknuts, Lubrication Tools, Machine Tool Holding, Mechanical Hand Tools, Metal Stock, O-Rings, Pneumatic Tools, Retaining Rings, Safety, Saw Blades, Shaft Collars, Shims, Storage Devices","Linear Motion":"Acme Screw, Ball Bushings, Ball Screw, Ball Spline, Carriage & Blocks, Guide Wheel & Tracks, Linear Actuators, Linear Bearings, Linear Plain Bearings, Linear Shaft Round/Precision, Linear Shaft Supports, Linear Systems, Miniatures, Profile Guide Rails","Lubrication & Industrial Chemicals":"Adhesives, Anti-Seize, Automatic Lubricators, Cleaners & Degreasers, Coatings, Epoxies, Gasketing, Grease, Oils, Paints & Primers, Penetrants, Sealants, Solvents","Material Handling":"Belt Cleaners & Scrapers, Belt Fasteners, Casters, Conveyor Belts, Conveyor Buckets, Conveyor Chains, Conveyor Idlers, Flattop Chain, Industrial Vibrators, Lifting Products, Modular Plastic Belts, Molded & Extruded Rubber Products, Pulleys & Sprockets, Roller Conveyor, Screw Conveyor, Wire Belting","Power Transmission":"Adjustable Belt Drives, Bushings, Clutches & Brakes, Disc Couplings, Elastomeric Couplings, Engineered Chain, FHP Pulley, Flat Belts, Flex-Sleeve Couplings, Fluid Couplings, Gear Couplings, Grid Couplings, Heavy Duty V-Belt QD Pulley, Heavy Duty V-Belt TL Pulley, Jaw Couplings, Keyless Bushing, QD Bushings, Rigid Couplings, Roller Chain & Sprockets, Silent Chain, Taper-Lock Bushings & Sheaves, Timing Belts & Pulleys, Torque Limiters, U-Joints, Variable Speed Belt Pulley, V-Belts (All Types)","Process Control & Instrumentation":"Analyzers, Controllers, Gauges, Instrument Tube Fittings, Flow Meters, Pumps, PVC Pipes, Sensors, Valves","Seals":"Mechanical (Inch & Metric), Oilbath, Packing Seals & U-Cups, Shaft, Sheet Gasket, Split Oil, Standard Oil, V-Ring, Wear Sleeves"};
+const PACK={"Printers":"Hi-Resolution Printers, Large Character Printers, Thermal Inkjet Printers, UV LED Curing, Ink Delivery System, Print Validation System","Case & Material Handling":"Packaging Automation, Case Erector, Case Sealer, Tray Former, Wrap Around Case Packer, Top Sealer, Taper","Adhesives":"Hotmelt Adhesive, EVA, Fugitive, Metallocene, Polyamide, Polyethylene, Polyolefin, PSA, Waterbased","Coders":"CIJ Small Character Coders, Laser Coders, Ink Jet Fluids, Coding & Marking Software","Hotmelt Equipment":"Hotmelt Units, Handgun Units, Hoses, Automatic Guns, Rebuild & Exchange Programs"};
+const SVC=["Air Compressor PMs & Service Contracts","Motor & Gearbox Rebuild","Reverse Engineer OEM Parts","Mass Produce Components","Machine Shop & Fabrication","Custom Component Kitting","Vendor Managed Inventory","Custom Tool Cribs","Concrete Repair","Custom Electrical Panels","Custom PLC Programming","Dry Ice Blasting","Refurbish/Repair Glue Systems & Valves","Glue System PMs","Inkjet Printer PMs"];
+
+const ORD=["1st","2nd","3rd","4th","5th","6th"];
+const esc=s=>String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/"/g,"&quot;");
+document.getElementById("depts").innerHTML=DEPTS.map((d,i)=>`<article class="dept" id="d${i+1}"><div class="card"><img src="img/${d.img}.jpg" alt="${esc(d.alt)}" width="1800" height="1200" loading="lazy"><div class="tx"><div class="no">${ORD[i]} gear<span>${i+1} / 6</span></div><h2>${esc(d.k)}${d.n?'<span class="new">NEW</span>':''}</h2><p class="hook">${esc(d.s)}</p><p>${esc(d.t)}</p><div class="chips">${d.i.map(x=>`<span>${esc(x)}</span>`).join("")}</div>${d.j?`<div class="brands"><b>Jobsite supply</b>${d.j.map(esc).join(" · ")}</div>`:""}${d.b.length?`<div class="brands"><b>Brands we source</b>${d.b.map(esc).join(" · ")}</div>`:""}</div></div></article>`).join("");
+document.getElementById("bgs").innerHTML=["bg-hero",...DEPTS.map(d=>d.bg)].map(b=>`<div style="background-image:url(img/${b}.jpg)"></div>`).join("");
+document.getElementById("gate").innerHTML=DEPTS.map((d,i)=>`<li><a href="#d${i+1}" aria-label="${ORD[i]} gear: ${esc(d.k)}">${i+1}</a></li>`).join("");
+const det=o=>Object.entries(o).map(([k,v])=>`<details><summary>${esc(k)}</summary><p>${esc(v)}</p></details>`).join("");
+document.getElementById("cats").innerHTML=det(CATS);
+document.getElementById("pack").innerHTML=det(PACK);
+document.getElementById("svc").innerHTML=SVC.map(s=>`<span>${esc(s)}</span>`).join("");
+document.getElementById("rfqform").addEventListener("submit",e=>{e.preventDefault();const o=document.getElementById("out");
+ o.textContent="Mock only, nothing was sent. On the live site this goes to the shared sales inbox and texts the on-call account manager.";o.hidden=false});
+
+/* the gear: film-rendered frames, scrubbed by scroll */
+(function(){
+ const N=181, PER=30, stage=document.getElementById("stage"), cv=document.getElementById("gear"), ctx=cv.getContext("2d");
+ const imgs=[], ok=new Array(N).fill(false), src=i=>`gear/f${String(i).padStart(4,"0")}.webp`;
+ const order=[]; for(let k=0;k<=6;k++)order.push(k*PER); for(const s of [10,5,1])for(let i=0;i<N;i+=s)if(!order.includes(i))order.push(i);
+ let q=0,active=0,want=0,shown=-1;
+ function pump(){while(active<6&&q<order.length){const i=order[q++];active++;const im=new Image();im.decoding="async";
+  im.onload=()=>{ok[i]=true;active--;if(Math.abs(i-want)<=Math.abs(shown-want)||shown<0)draw();pump()};im.onerror=()=>{active--;pump()};im.src=src(i);imgs[i]=im}}
+ function nearest(i){for(let d=0;d<N;d++){if(i-d>=0&&ok[i-d])return i-d;if(i+d<N&&ok[i+d])return i+d}return -1}
+ let home=0;
+ function draw(){const j=nearest(want);if(j<0)return;shown=j;ctx.clearRect(0,0,cv.width,cv.height);
+  // last stretch: the sixth section's red fades out and the gear is back in the logo position (frame 0); additive blend = true crossfade on transparent frames
+  const hm=home>0&&ok[0]?home:0;ctx.globalAlpha=1-hm;ctx.drawImage(imgs[j],0,0,cv.width,cv.height);
+  if(hm){ctx.globalCompositeOperation="lighter";ctx.globalAlpha=hm;ctx.drawImage(imgs[0],0,0,cv.width,cv.height);ctx.globalCompositeOperation="source-over"}ctx.globalAlpha=1}
+ function size(){const d=Math.min(devicePixelRatio||1,3),r=cv.getBoundingClientRect();cv.width=Math.round(r.width*d);cv.height=Math.round(r.height*d);shown=-1;draw()}
+ const sec=document.getElementById("one"), stops=[document.getElementById("top"),...document.querySelectorAll(".dept"),sec];
+ const bgs=[...document.querySelectorAll("#bgs div")];
+ const gate=()=>[...document.querySelectorAll("#gate a")];
+ let f=0,ft=0,last=-1,raf=0;
+ function read(){
+  const H=innerHeight,c=H*0.5,m=stops.map(el=>{const r=el.getBoundingClientRect();return r.top+r.height*0.5-c});
+  let t=0;for(let i=0;i<m.length-1;i++){if(m[i]<=0&&m[i+1]>0){t=i+(-m[i])/(m[i+1]-m[i]);break}if(m[i+1]<=0)t=i+1}
+  if(m[0]>0)t=0; ft=Math.min(7,Math.max(0,t));
+  stage.classList.toggle("dim",sec.getBoundingClientRect().bottom<H*0.55);
+  if(!raf)raf=requestAnimationFrame(tick);
+ }
+ function tick(){raf=0;f+=(ft-f)*0.2;if(Math.abs(ft-f)<0.002)f=ft;else raf=requestAnimationFrame(tick);
+  const h=Math.max(0,Math.min(1,f-6)),hc=h!==home;home=h;
+  bgs.forEach((b,i)=>{const o=Math.max(0,1-Math.abs(f-i)*1.15);b.style.opacity=o.toFixed(3)});
+  want=Math.round(Math.min(f,6)*PER);if(want!==shown||hc)draw();
+  const s=Math.round(f);if(s!==last){last=s;gate().forEach((a,i)=>a.classList.toggle("on",i===s-1&&s<=6))}}
+ addEventListener("scroll",read,{passive:true}); addEventListener("resize",size,{passive:true});
+ pump(); size(); read();
+})();
+</script>
+</body></html>
